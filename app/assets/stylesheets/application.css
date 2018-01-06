@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.header {
+  /*背景について*/
+  position: fixed;
+  background-color: #F5F5F5;
+  top: 0px;
+  left: 0px;
+  height: 23px;
+  width: 100%;
+  
+  /*文字について*/
+  font-size: 12px;
+  color: #708090;
+  display: flex;
+  align-items: center;
+  padding-left: 175px;
+}
+
+.header_logo{
+  background-color: rgba( 255, 255, 255, 0.8 );
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+}
+
+.button{
+  font-size: 18px;
+  padding: 5px 10px;
+  background-color: #59b1eb;
+  color: #fff;
+  border-style: none;
+  border-radius: 5px;　　/*丸み*/
+}
+.button:hover {
+  background-color: #B0E0E6;
+}
+
+.footer{
+  position: absolute;
+  background-color: #696969;
+  bottom: 0px;
+  left: 0px;
+  height: 23px;
+  width: 100%;
+  
+  /*文字について*/
+  font-size: 12px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+/*.footer p{
+  text-align:center;
+}*/

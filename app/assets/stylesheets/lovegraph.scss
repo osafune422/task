@@ -1,0 +1,51 @@
+// Place all the styles related to the lovegraph controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: 
+
+h2{
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 175px;
+}
+
+.top{
+    /* リンクへの下線を無くす */
+    text-decoration: none;  
+}
+
+/* カラム全体 */
+#wrapper{
+    margin-left: 175px;
+    margin-right: 180px;
+}
+
+/* 左カラム */
+#leftColumn {
+    float:left;
+    width:100%;
+    /*margin-right: -190px;*/
+    /*padding-right:200px;
+    box-size:border-box;*/
+    background:#00ffff;
+}
+
+/* 右カラム */
+#rightColumn {
+    float:right;
+    width:250px;
+    margin-left:-300px;
+    /*padding:0 0 0 20px;
+    padding-right: 175px;*/
+    background:#000000;
+}
+
+.clearfix{
+    overflow:hidden;
+    zoom:1;
+}
+
+.clearfix:after{
+    clear:both;
+    display:block;
+    content:'';
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>出張写真撮影サービスのlovegraph</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <!-- ここから書き足し -->
+    <div class=header>
+      <p>Lovegraph [ラブグラフ]｜出張写真撮影サービス</p>
+    </div>
+    
+    <h1>
+      <div class=header_logo>
+        <%= link_to(image_tag("header_lovegraph.png"),"/lovegraph/top") %>
+        <%= link_to(image_tag("header_about.png", :size => "84x28"),"/lovegraph/about") %>
+        <%= link_to(image_tag("header_flow.png", :size => "84x28"),"/lovegraph/flow") %>
+        <%= link_to(image_tag("header_photos.png", :size => "84x28"),"/lovegraph/photos") %>
+        <%= link_to(image_tag("header_staffs.png", :size => "84x28"),"/lovegraph/staffs") %>
+        <%= link_to(image_tag("header_login.png", :size => "84x28"),"/lovegraph/login") %>
+        <button class="button" type="submit" href="#">撮影申込み</button>
+      </div>
+    </h1>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+  
+  <foot>
+    <div class=footer>
+      <p>© 2014 Lovegraph Inc.</p>
+    </div>
+  </foot>
+</html>
