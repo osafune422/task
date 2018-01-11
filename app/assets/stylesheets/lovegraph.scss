@@ -17,16 +17,16 @@ h2{
 #wrapper{
     margin-left: 175px;
     margin-right: 180px;
+    height:100%;
 }
 
 /* 左カラム */
 #leftColumn {
     float:left;
     width:100%;
-    /*margin-right: -190px;*/
-    /*padding-right:200px;
-    box-size:border-box;*/
     background:#00ffff;
+    text-align: justify;
+    text-justify: distribute-all-lines;
 }
 
 /* 右カラム */
@@ -34,9 +34,9 @@ h2{
     float:right;
     width:250px;
     margin-left:-300px;
-    /*padding:0 0 0 20px;
-    padding-right: 175px;*/
     background:#000000;
+    text-align: justify;
+    text-justify: distribute-all-lines;
 }
 
 .clearfix{
@@ -49,3 +49,10 @@ h2{
     display:block;
     content:'';
 }
+
+
+
+
+/* flow */
+
+
