@@ -23,8 +23,8 @@ h2{
 /* 左カラム */
 #leftColumn {
     float:left;
-    width:100%;
-    background:#00ffff;
+    width:72%;
+    /*background:#00ffff;*/
     text-align: justify;
     text-justify: distribute-all-lines;
 }
@@ -50,7 +50,19 @@ h2{
     content:'';
 }
 
+.straghtline {
+   border-width: 1px 0px 0px 0px; /* 太さ */
+   border-style: solid;
+   border-color: gray;
+   height: 1px;        
+}
 
+.dotline {
+   border-width: 1px 0px 2px 0px; /* 太さ */
+   border-style: dotted;
+   border-color: #E6E6FA;
+   height: 1px;         
+}
 
 
 /* flow */

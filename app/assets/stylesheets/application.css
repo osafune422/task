@@ -52,18 +52,17 @@
 
 .footer_map{
   /* 背景 */
-  position: fixed;
+  position: relative;
+  box-sizing: border-box;
   background-color: #F5F5F5;
-  bottom: 23px;
   left: 0px;
-  width: 100%;
+  right:0px;
   height: 170px;
-  
+  width: 100%;
+  display: flex;
   
   /* logo */
   padding-left: 175px;
-  
-  /* 文字 */
 }
 
 .foot_table{
@@ -76,7 +75,7 @@
 }
 
 .footer{
-  position: fixed;
+  position: relative;
   background-color: #696969;
   bottom: 0px;
   left: 0px;
