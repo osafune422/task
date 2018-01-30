@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+   <body>
+        <div id="wrapper" class="clearfix">
+            <!-- 左カラム　開始 -->
+            <div id="leftColumn">
+                <hr class=straghtline>
+                <h3>撮影申込み</h3>
+                <hr class=dotline>
+                
+                <% @request.errors.full_messages.each do |message| %>
+                    <div class="form-error">
+                        <%= message %>
+                    </div>
+                <% end %>
+                
+                <%= form_tag("/requests/create") do %>
+                    <p class=essential>撮影ジャンル</p>
+                    <input type="radio" name="genre" value="カップル写真">カップル写真<br>
+                    <input type="radio" name="genre" value="ウェディング写真">ウェディング写真<br>
+                    <input type="radio" name="genre" value="ファミリー写真">ファミリー写真<br>
+                    <input type="radio" name="genre" value="フレンド写真">フレンド写真<br>
+                    <input type="radio" name="genre" value="成人式写真">成人式写真<br>
+                    <input type="radio" name="genre" value="卒業式写真">卒業式写真
+                
+                    <p class=essential>撮影エリア</p>
+                    <select name="place">
+                        <option value="">▼選択してください</option>
+                        <optgroup label="北海道">
+                        <option value="旭川">旭川</option>
+                        <option value="函館">函館</option>
+                        <option value="釧路">釧路</option>
+                        <option value="札幌">札幌</option>
+                        <option value="北海道の市区町村">以外の市区町村</option>
+                    
+                    </select>
+                    
+                    <p class=essential>日付</p>
+                    <input type=date name="date">
+                    <p class=essential>名前</p>
+                    <input class=signup name="email" >
+                    <p class=essential>電話番号</p>
+                    <input class=signup name="phone" placeholder="09000000000" >
+                
+                    <input class="button_signup" type="submit" value="申込み">
+                <% end %>
+                
+                
+            </div>
+            <!-- 左カラム　終了 -->
+        
+            <!-- 右カラム　開始 -->
+            <div id="rightColumn">
+                右ナビエリア
+            </div>
+            <!-- 右カラム　終了 -->
+        </div>
+      
+      
+      
+      
+  </body>

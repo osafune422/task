@@ -1,0 +1,36 @@
+// Place all the styles related to the requests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.essential:after{
+    content:"必須";
+    font-size:14px;
+    color:#FFFFFF;
+    background-color:#C71585;
+    padding:0px 4px;
+    margin-left:20px;
+    border-radius:2px;
+}
+
+.button_pic_upload{
+  font-size: 15px;
+  padding: 10px 100px;
+  background-color: #59b1eb;
+  color: #fff;
+  border-style: none;
+  border-radius: 5px; /*丸み*/
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+.button_pic_upload:hover{
+  background-color: #B0E0E6;
+}
+
+.imagePreview {
+    width: 216px;
+    height: 144px;
+    margin-left: 10px;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <body>
+        <div id="wrapper" class="clearfix">
+            <!-- 左カラム　開始 -->
+            <div id="leftColumn">
+                <hr class=straghtline>
+                <h3>撮影データ送信</h3>
+                <hr class=dotline>
+                
+                <h4><%= @request.date %></h4>
+                <p><%= @request.name %></p>
+                
+                <%= form_tag("/requests/upload") do %>
+                <% 5.times do |num| %>
+                    <div class=imagePreview></div>
+                    <input type = "file" name = "<%= "pic#{num}" %>">
+                <% end %>
+                
+                <input class="button_signup" type="submit" value="送信">
+                
+                <% end %>
+                
+                <br>
+                
+                
+                
+            </div>
+            <!-- 左カラム　終了 -->
+        
+            <!-- 右カラム　開始 -->
+            <div id="rightColumn">
+                右ナビエリア
+            </div>
+            <!-- 右カラム　終了 -->
+        </div>
+      
+      
+      
+      
+  </body>

@@ -19,11 +19,25 @@
         <%= link_to(image_tag("header_flow.png", :size => "84x28"),"/lovegraph/flow") %>
         <%= link_to(image_tag("header_photos.png", :size => "84x28"),"/lovegraph/photos") %>
         <%= link_to(image_tag("header_staffs.png", :size => "84x28"),"/lovegraph/staffs") %>
-        <%= link_to(image_tag("header_login.png", :size => "84x28"),"/lovegraph/login") %>
-        <button class="button" type="submit" href="#">撮影申込み</button>
+        
+        <% if @current_user %>
+          <%= link_to(image_tag("header_mypage.png", :size => "84x28"),"/mypage/#{@current_user.id}") %>
+        <% elsif @current_worker %>
+          <%= link_to(image_tag("header_mypage.png", :size => "84x28"),"/mypage_worker/#{@current_worker.id}") %>
+        <% else %>
+          <%= link_to(image_tag("header_login.png", :size => "84x28"),"/login") %>
+        <% end %>
+        
+        <a class="button" type="submit" href="/request">撮影申込み</a>
       </div>
     </h1>
   </head>
+  
+  <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+  <% end %>
 
   <body>
     <%= yield %>

@@ -6,6 +6,10 @@ class LovegraphController < ApplicationController
   def flow
   end
   def photos
+    @requests = Request.all
+  end
+  def detail_photos
+    @request = Request.find_by(id: params[:id])
   end
   def staffs
   end

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <body>
+        <div id="wrapper" class="clearfix">
+            <!-- 左カラム　開始 -->
+            <div id="leftColumn">
+                <p><%= @user.name %></p>
+                <p><%= @user.email %></p>
+                <p><%= @user.password %></p>
+                <%= link_to("編集", "/edit/#{@user.id}") %>
+                <%= link_to("ログアウト", "/logout", {method: :post}) %>
+                <br><br>
+                
+                <% @user.requests.each do |request| %>
+                    <p><%= link_to(request.date, "/myphoto/#{request.id}") %></p>
+                    <p><%= request.place %>   <%= request.genre %></p><br>
+                    
+                <% end %>
+            </div>
+            <!-- 左カラム　終了 -->
+        
+            <!-- 右カラム　開始 -->
+            <div id="rightColumn">
+                右ナビエリア
+            </div>
+            <!-- 右カラム　終了 -->
+        </div>
+      
+      
+      
+      
+  </body>
