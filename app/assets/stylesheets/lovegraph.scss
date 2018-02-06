@@ -1,0 +1,98 @@
+// Place all the styles related to the lovegraph controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2{
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 175px;
+}
+
+.top{
+    /* リンクへの下線を無くす */
+    text-decoration: none;  
+}
+
+/* カラム全体 */
+#wrapper{
+    margin-left: 175px;
+    margin-right: 180px;
+    height:100%;
+}
+
+/* 左カラム */
+#leftColumn {
+    float:left;
+    width:72%;
+    /*background:#00ffff;*/
+    text-align: justify;
+    text-justify: distribute-all-lines;
+}
+
+/* 右カラム */
+#rightColumn {
+    float:right;
+    width:250px;
+    margin-left:-300px;
+    /*background:#000000;*/
+    text-align: justify;
+    text-justify: distribute-all-lines;
+}
+
+.clearfix{
+    overflow:hidden;
+    zoom:1;
+}
+
+.clearfix:after{
+    clear:both;
+    display:block;
+    content:'';
+}
+
+.straghtline {
+   border-width: 1px 0px 0px 0px; /* 太さ */
+   border-style: solid;
+   border-color: gray;
+   height: 1px;        
+}
+
+.dotline {
+   border-width: 1px 0px 2px 0px; /* 太さ */
+   border-style: dotted;
+   border-color: #E6E6FA;
+   height: 1px;         
+}
+
+.form-error{
+    font-color:red;
+}
+
+a{ 
+    text-decoration: none;
+    color: #C0C0C0;
+}
+a:hover{ 
+    text-decoration: none;
+    color: #59b1eb;
+}
+
+.staffsindex{
+    text-align: center;
+}
+
+.staffsindex img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 10px 25px 0px 25px;
+}
+
+.staffsindex h6{
+    font-size: 18px;
+}
+
+.staff{
+    float: left;
+    padding-right: 20px;
+}

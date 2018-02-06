@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>カメラマン一覧｜出張写真撮影サービスのLovegraph[ラブグラフ]</title>
+      
+      <h2>
+          <a class="top" href="/lovegraph/top">出張写真撮影サービス LOVEGRAPH トップ</a> › カメラマン一覧
+      </h2>
+  </head>
+
+  <body>
+      <div id="wrapper" class="clearfix">
+          <!-- 左カラム　開始 -->
+          <div id="leftColumn">
+            <div class="staffsindex">
+              <% @workers.each do |worker| %>
+                <div class="staff">
+                  <img src="<%= "/avator/#{worker.avator_name}" %>">
+                  <% if worker.nickname != nil %>
+                    <h6><%= worker.nickname %></h6>
+                  <% else %>
+                    <h6><%= worker.name %></h6>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <!-- 左カラム　終了 -->
+      
+          <!-- 右カラム　開始 -->
+          <div id="rightColumn">
+              右ナビエリア
+          </div>
+          <!-- 右カラム　終了 -->
+      </div>
+    
+    
+    
+    
+  </body>

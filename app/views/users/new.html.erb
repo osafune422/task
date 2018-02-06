@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <body>
+        <div id="wrapper" class="clearfix">
+            <!-- 左カラム　開始 -->
+            <div id="leftColumn">
+                <hr class=straghtline>
+                <h3>メールアドレスで新規登録</h3>
+                <hr class=dotline>
+                
+                <% @user.errors.full_messages.each do |message| %>
+                    <div class="form-error">
+                        <%= message %>
+                    </div>
+                <% end %>
+                
+                <%= form_tag("/users/create") do %>
+                    <p>お名前</p>
+                    <input class=signup name="name" >
+                    <p>メールアドレス</p>
+                    <input class=signup placeholder="me@example.com" name="email" >
+                    <p>パスワード</p>
+                    <input class=signup placeholder="********" name="password" type="password">
+                
+                    <input class="button_signup" type="submit" value="次へ">
+                <% end %>
+            </div>
+            <!-- 左カラム　終了 -->
+        
+            <!-- 右カラム　開始 -->
+            <div id="rightColumn">
+                右ナビエリア
+            </div>
+            <!-- 右カラム　終了 -->
+        </div>
+      
+      
+      
+      
+  </body>

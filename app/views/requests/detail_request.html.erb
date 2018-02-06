@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <body>
+        <div id="wrapper" class="clearfix">
+            <!-- 左カラム　開始 -->
+            <div id="leftColumn">
+                <hr class=straghtline>
+                <h3>予約詳細</h3>
+                <hr class=dotline>
+                
+                <h4><%= @request.date %></h4>
+                <p><%= @request.name %></p>
+                <p><%= @request.genre %>   　✈<%= @request.place %></p>
+                
+                <% if @request.pic1 != nil %>
+                    <% 10.times do |num| %>
+                        <img src="<%= "/pictures/#{@request.date.year}/#{@request.date.month}/#{@request.date.day}/#{@request.name}/#{@request.date}_#{num+1}.jpg" %>" height="144px">
+                        <% if (num+1) % 3 == 0 %>
+                            <br>
+                        <% end %>
+                    <% end %>
+                <% end %>
+                <br>
+                
+                <%= link_to("撮影データ送信", "/requests/upload/#{@request.id}") %>
+                
+                <br>
+                
+            </div>
+            <!-- 左カラム　終了 -->
+        
+            <!-- 右カラム　開始 -->
+            <div id="rightColumn">
+                右ナビエリア
+            </div>
+            <!-- 右カラム　終了 -->
+        </div>
+      
+      
+      
+      
+  </body>

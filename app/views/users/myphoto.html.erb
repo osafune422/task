@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <body>
+        <div id="wrapper" class="clearfix">
+            <!-- 左カラム　開始 -->
+            <div id="leftColumn">
+                <h4><%= @request.date %></h4>
+                <p><%= @request.place %>   <%= @request.genre %></p><br>
+                
+                <% if @request.pic1 != nil %>
+                    <% 5.times do |num| %>
+                        <img src="<%= "/pictures/#{@request.date.year}/#{@request.date.month}/#{@request.date.day}/#{@request.name}/#{@request.date}_#{num+1}.jpg" %>" width=20%>
+                    <% end %>
+                <% end %>
+                
+                <p><%= link_to("戻る", "/mypage/#{@current_user.id}") %></p>
+                
+                <br><br>
+                
+                <p><%= link_to("取り消し", "/request/cancel/#{@request.id}", {method: "post"}) %></p>
+            </div>
+            <!-- 左カラム　終了 -->
+        
+            <!-- 右カラム　開始 -->
+            <div id="rightColumn">
+                右ナビエリア
+            </div>
+            <!-- 右カラム　終了 -->
+        </div>
+      
+      
+      
+      
+  </body>

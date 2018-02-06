@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <body>
+        <div id="wrapper" class="clearfix">
+            <!-- 左カラム　開始 -->
+            <div id="leftColumn">
+                <p>【<%= @worker.status %>】  No.<%= @worker.id %></p>
+                <div class="display">
+                    <img src="<%= "/avator/#{@worker.avator_name}" %>">
+                </div>
+                
+                <div class="display">
+                    <p><%= @worker.name %></p>
+                    <p><%= @worker.email %></p>
+                    <p><%= @worker.password %></p>
+                
+                    <%= link_to("編集", "/edit_worker/#{@worker.id}") %>
+                    <%= link_to("ログアウト", "/workers/logout", {method: :post}) %><br><br>
+                    
+                    <% if @worker.status == "master"%>
+                        <%= link_to("スタッフ一覧", "/workers/index") %><br>
+                        <%= link_to("スタッフ登録", "/signup_worker") %><br>
+                    <% end %>
+                
+                    <%= link_to("撮影予約一覧", "/requests/index") %>
+                </div>
+            </div>
+            <!-- 左カラム　終了 -->
+        
+            <!-- 右カラム　開始 -->
+            <div id="rightColumn">
+                右ナビエリア
+            </div>
+            <!-- 右カラム　終了 -->
+        </div>
+      
+      
+      
+      
+  </body>
