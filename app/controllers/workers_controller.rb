@@ -53,9 +53,14 @@ class WorkersController < ApplicationController
   def update
     @worker = Worker.find_by(id: params[:id])
     @worker.name = params[:name]
-    @worker.nickname = params[:nickname]
     @worker.email = params[:email]
     @worker.password = params[:password]
+    if params[:nickname]
+      @worker.nickname = params[:nickname]
+    else
+      @worker.nickname = params[:name]
+    end
+    
     
     if params[:avator]
       @worker.avator_name = "#{@worker.nickname}.jpg"

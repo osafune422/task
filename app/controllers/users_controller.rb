@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_action :authenticate_user, {only:[:mypage, :edit]}       #ログインなしの時
   before_action :forbid_login_user, {only:[:new, :create, :login_form, :login]}       #ログインありの時
-  before_action :ensure_correct_user, {only:[:mypage, :myphoto, :edit, :update]}      #ユーザーのidが異なる時
+  before_action :ensure_correct_user, {only:[:mypage, :edit, :update]}      #ユーザーのidが異なる時
+  before_action :ensure_correct_user_request, {only:[:myphoto]}      #ユーザーのidが異なる時
   
   def mypage
     @user = User.find_by(id: params[:id])
@@ -82,6 +83,14 @@ class UsersController < ApplicationController
   
   def ensure_correct_user
     if @current_user.id != params[:id].to_i
+      flash[:notice] = "権限がありません"
+      redirect_to("/lovegraph/top")
+    end
+  end
+  
+  def ensure_correct_user_request
+    @request=Request.find_by(id: params[:id])
+    if @current_user.id != @request.user_id.to_i
       flash[:notice] = "権限がありません"
       redirect_to("/lovegraph/top")
     end

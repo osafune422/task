@@ -1,5 +1,6 @@
 class RequestsController < ApplicationController
   before_action :authenticate_worker, {only:[:index_request, :detail_request, :send_picture, :upload_picture]}
+  before_action :ensure_correct_user, {only:[:cancel]}      #ユーザーのidが異なる時
   
   def detail_request
     @request = Request.find_by(id: params[:id])
@@ -104,7 +105,14 @@ class RequestsController < ApplicationController
     @request.destroy
     flash[:notice] = "予定をキャンセルしました"
     redirect_to("/mypage/#{@current_user.id}")
-      
+  end
+  
+  def ensure_correct_user
+    @request = Request.find_by(id: params[:id])
+    if @current_user.id != @request.user_id.to_i
+      flash[:notice] = "権限がありません"
+      redirect_to("/lovegraph/top")
+    end
   end
   
 end

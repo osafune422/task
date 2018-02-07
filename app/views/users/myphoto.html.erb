@@ -8,7 +8,7 @@
                 <p><%= @request.place %>   <%= @request.genre %></p><br>
                 
                 <% if @request.pic1 != nil %>
-                    <% 5.times do |num| %>
+                    <% 10.times do |num| %>
                         <img src="<%= "/pictures/#{@request.date.year}/#{@request.date.month}/#{@request.date.day}/#{@request.name}/#{@request.date}_#{num+1}.jpg" %>" width=20%>
                     <% end %>
                 <% end %>
